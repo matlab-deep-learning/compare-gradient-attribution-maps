@@ -99,12 +99,9 @@ Gradient attribution techniques compute the gradient of the output score with re
 
 Calculates the gradients of the predicted class score with respect to the input image. The gradients represent how much the image pixels contribute to the prediction and how much changes in the pixel affect the score. The attribution map is the same size as the image.
 
-<img src="https://render.githubusercontent.com/render/math?math=E^{c}_{xy} = \frac{ \delta y^c }{ \delta I_{xy} }">
-
-
-```math
+$$
 E^{c}_{xy} = \frac{ \delta y^c }{ \delta I_{xy} }
-```
+$$
 
 ### Guided Backpropagation
 
