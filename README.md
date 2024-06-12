@@ -101,7 +101,7 @@ Calculates the gradients of the predicted class score with respect to the input 
 
 <img src="https://render.githubusercontent.com/render/math?math=E^{c}_{xy} = \frac{ \delta y^c }{ \delta I_{xy} }">
 
-$E^{c}_{xy} = \frac{ \delta y^c }{ \delta I_{xy} }$
+$`E^{c}_{xy} = \frac{ \delta y^c }{ \delta I_{xy} }`$
 
 ### Guided Backpropagation
 
