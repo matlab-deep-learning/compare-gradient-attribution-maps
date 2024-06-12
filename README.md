@@ -112,7 +112,7 @@ The attribution map is sharpened by setting elements of the gradients that are l
 \frac{\delta L}{\delta X} = (X > 0) * (\frac{\delta L}{\delta Z} > 0) * \frac{\delta L}{\delta Z}
 ```
 
-where <img src="https://latex.codecogs.com/gif.latex?\inline&space;L"/> is the loss, <img src="https://latex.codecogs.com/gif.latex?\inline&space;X"/> the input to the ReLU and <img src="https://latex.codecogs.com/gif.latex?\inline&space;Z"/> the output of the ReLU layer.
+where $L$ <img src="https://latex.codecogs.com/gif.latex?\inline&space;L"/> is the loss, <img src="https://latex.codecogs.com/gif.latex?\inline&space;X"/> the input to the ReLU and <img src="https://latex.codecogs.com/gif.latex?\inline&space;Z"/> the output of the ReLU layer.
 
 
 ### Zeiler Fergus
