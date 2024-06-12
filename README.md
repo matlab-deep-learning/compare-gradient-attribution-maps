@@ -99,16 +99,18 @@ Gradient attribution techniques compute the gradient of the output score with re
 
 Calculates the gradients of the predicted class score with respect to the input image. The gradients represent how much the image pixels contribute to the prediction and how much changes in the pixel affect the score. The attribution map is the same size as the image.
 
-$$
+```math
 E^{c}_{xy} = \frac{ \delta y^c }{ \delta I_{xy} }
-$$
+```
 
 ### Guided Backpropagation
 
 
 The attribution map is sharpened by setting elements of the gradients that are less than zero in the ReLU layers to zero.  This means that pixel elements that do not contribute towards prediction are discarded. This is defined as
 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{\delta L}{\delta X} = (X > 0) * (\frac{\delta L}{\delta Z} > 0) * \frac{\delta L}{\delta Z}">
+```math
+\frac{\delta L}{\delta X} = (X > 0) * (\frac{\delta L}{\delta Z} > 0) * \frac{\delta L}{\delta Z}
+```
 
 where <img src="https://latex.codecogs.com/gif.latex?\inline&space;L"/> is the loss, <img src="https://latex.codecogs.com/gif.latex?\inline&space;X"/> the input to the ReLU and <img src="https://latex.codecogs.com/gif.latex?\inline&space;Z"/> the output of the ReLU layer.
 
@@ -118,7 +120,9 @@ where <img src="https://latex.codecogs.com/gif.latex?\inline&space;L"/> is the l
 
 Similar to guided backpropagation, this technique sharpens the attribution map by using a modified ReLU layer in its backpropagation. Here, the backwards function is defined as
 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{\delta L}{\delta X} = (\frac{\delta L}{\delta Z} > 0) * \frac{\delta L}{\delta Z}">
+```math
+\frac{\delta L}{\delta X} = (\frac{\delta L}{\delta Z} > 0) * \frac{\delta L}{\delta Z}
+```
 
 Calculate saliency maps using the three different techniques.
 
